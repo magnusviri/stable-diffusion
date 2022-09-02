@@ -1,0 +1,36 @@
+name: Build
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ macos-12 ]
+    name: Build on ${{ matrix.os }} miniforge
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v3
+      - name: Install Miniforge
+        run: |
+          curl -fsSLo Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh"
+          bash Miniforge3.sh -b
+      - name: Create environment
+        run: |
+          ls -l
+          which conda
+          conda env create -f environment-mac.yaml
+      - name: Download the model
+        run: |
+          mkdir -p models/ldm/stable-diffusion-v1/
+          if [ ! -e models/ldm/stable-diffusion-v1/model.ckpt ]; then
+            #curl -o models/ldm/stable-diffusion-v1/model.ckpt https://?.com/
+          else
+            echo "checkpoint already downloaded"
+          fi
+      - name: Run the tests
+        run: |
+          python scripts/dream.py
