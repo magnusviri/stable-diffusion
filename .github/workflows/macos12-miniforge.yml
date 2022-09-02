@@ -27,6 +27,7 @@ jobs:
         run: |
           mkdir -p models/ldm/stable-diffusion-v1/
           if [ ! -e models/ldm/stable-diffusion-v1/model.ckpt ]; then
+            echo download the model here!
             #curl -o models/ldm/stable-diffusion-v1/model.ckpt https://?.com/
           else
             echo "checkpoint already downloaded"
