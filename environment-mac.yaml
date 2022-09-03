@@ -3,9 +3,9 @@ channels:
   - pytorch-nightly
   - conda-forge
 dependencies:
-  - python==3.9.13
+  - python==3.10.4
   - pip==22.2.2
- 
+
   # pytorch-nightly, left unpinned
   - pytorch
   - torchmetrics
