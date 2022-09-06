@@ -1,9 +1,9 @@
 name: ldm
 channels:
-  - pytorch
+  - pytorch-nightly
   - conda-forge
 dependencies:
-  - python==3.9.12
+  - python==3.9.13
   - pip==22.2.2
  
   # pytorch left unpinned
