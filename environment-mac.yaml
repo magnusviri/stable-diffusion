@@ -3,8 +3,8 @@ channels:
   - pytorch-nightly
   - conda-forge
 dependencies:
-  - python==3.10.5
-  - pip==22.2.2
+  - python==3.10.6
+  - pip
  
   # pytorch left unpinned
   - pytorch
@@ -18,29 +18,29 @@ dependencies:
   # sed -E 's/ldm/ldm-updated/;20,99s/- ([^=]+)==.+/- \1/' environment-mac.yaml > environment-mac-updated.yml
   # CONDA_SUBDIR=osx-arm64 conda env create -f environment-mac-updated.yml && conda list -n ldm-updated | awk ' {print "  - " $1 "==" $2;} '
   # ```
-  - albumentations==1.2.1
-  - coloredlogs==15.0.1
-  - einops==0.4.1
-  - grpcio==1.46.4
+  - albumentations
+  - coloredlogs
+  - einops
+  - grpcio
   - humanfriendly
-  - imageio-ffmpeg==0.4.7
-  - imageio==2.21.2
-  - imgaug==0.4.0
-  - kornia==0.6.7
-  - mpmath==1.2.1
+  - imageio-ffmpeg
+  - imageio
+  - imgaug
+  - kornia
+  - mpmath
   - nomkl
-  - numpy==1.23.2
-  - omegaconf==2.1.1
-  - onnx==1.12.0
-  - onnxruntime==1.12.1
-  - opencv==4.6.0
-  - pudb==2022.1
-  - pytorch-lightning==1.6.5
-  - scipy==1.9.1
-  - streamlit==1.12.2
-  - sympy==1.10.1
-  - tensorboard==2.9.0
-  - transformers==4.21.2
+  - numpy
+  - omegaconf
+  - onnx
+  - onnxruntime
+  - opencv
+  - pudb
+  - pytorch-lightning
+  - scipy
+  - streamlit
+  - sympy
+  - tensorboard
+  - transformers
   - pip:
     - invisible-watermark
     - test-tube
