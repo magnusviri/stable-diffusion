@@ -3,7 +3,7 @@ channels:
   - pytorch
   - conda-forge
 dependencies:
-  - python==3.10.5
+  - python==3.9.12
   - pip==22.2.2
  
   # pytorch left unpinned
