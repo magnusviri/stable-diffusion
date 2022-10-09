@@ -34,7 +34,7 @@ This will create stable-diffusion folder where you will follow the rest of the s
 5. Use anaconda to copy necessary python packages, create a new python environment named `ldm` and activate the environment.
 
 ```
-(base) ~/stable-diffusion$ conda env create -f environment.yaml
+(base) ~/stable-diffusion$ conda env create -f environment.yml
 (base) ~/stable-diffusion$ conda activate ldm
 (ldm) ~/stable-diffusion$
 ```
