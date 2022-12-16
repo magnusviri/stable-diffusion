@@ -47,7 +47,7 @@ dependencies:
   - pip:
     - invisible-watermark
     - test-tube
-    - tokenizers
+    - tokenizers==0.12.1
     - torch-fidelity
     - -e git+https://github.com/huggingface/diffusers.git@v0.2.4#egg=diffusers
     - -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
